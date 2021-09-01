@@ -316,6 +316,45 @@ img {
   margin-bottom: 25px;
 }
 
+.product {
+  color: #ffffff;
+  background-color: #252b42;
+}
+
+.product__container {
+  padding: 50px 0;
+}
+
+.product__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__item {
+  margin: 15px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__img {
+  max-width: 75px;
+  max-height: 60px;
+}
+
+.product__title {
+  margin-top: 30px;
+}
+
+.product__text {
+  text-align: center;
+  margin-top: 10px;
+}
+
 .button {
   display: block;
   min-width: 180px;
@@ -380,7 +419,6 @@ img {
   padding: 15px 25px;
 }
 
-#product,
 #pricing,
 #contact {
   margin-top: 6rem;
@@ -469,6 +507,14 @@ img {
     margin-right: 25px;
   }
 
+  .product__container {
+    padding: 65px 0;
+  }
+
+  .product__list {
+    flex-direction: row;
+  }
+
   .button--round,
   .button--transparent {
     padding: 15px 37px;
@@ -511,6 +557,10 @@ img {
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 0.2px;
+  }
+
+  .product__item {
+    margin: 30px;
   }
 }
 
