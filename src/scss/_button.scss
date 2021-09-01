@@ -1,0 +1,67 @@
+.button {
+  display: block;
+  min-width: 180px;
+  max-width: 250px;
+  padding: 15px 22px;
+  color: $textmenu;
+  background-color: $primary-color;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  transition: all 0.3s linear;
+
+  &--arrow {
+    padding-right: 40px;
+    background-image: url("../img/header/header__member.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: 15px 10px;
+    text-align: center;
+  }
+
+  &--round,
+  &--transparent {
+    padding: 10px 35px;
+    border-radius: 37px;
+    text-align: center;
+
+    @media (min-width: 992px) {
+      padding: 15px 37px;
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus,
+  &--arrow:hover,
+  &--arrow:active,
+  &--arrow:focus,
+  &--round:hover,
+  &--round:active,
+  &--round:focus {
+    color: $primary-color;
+    background-color: $textmenu;
+    transform: scale(0.9);
+    text-decoration: none;
+    padding: 15px 25px;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $textmenu;
+    text-align: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-color;
+      background-color: transparent;
+      border: 1px solid $primary-color;
+      transform: scale(0.9);
+      text-decoration: none;
+      padding: 15px 25px;
+    }
+  }
+}

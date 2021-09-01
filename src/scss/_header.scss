@@ -9,6 +9,10 @@
   text-align: center;
   padding: 35px;
 
+  @media (min-width: 1400px) {
+    background-color: transparent;
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
@@ -43,6 +47,10 @@
 
   &--sticky {
     padding: 5px;
+
+    @media (min-width: 1400px) {
+      background-color: $bgmenu;
+    }
 
     & > .container > .menu > .menu__body::before {
       height: 30px;
@@ -153,6 +161,7 @@
 
     @media (min-width: 992px) {
       position: static;
+      background-color: transparent;
     }
 
     &--active {
@@ -244,30 +253,6 @@
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 0.2px;
-    }
-
-    &--member {
-      display: block;
-      min-width: 220px;
-      padding: 15px 22px;
-      padding-right: 40px;
-      background-color: $primary-color;
-      border-radius: 5px;
-      background-image: url("../img/header/header__member.svg");
-      background-repeat: no-repeat;
-      background-position: 90% 50%;
-      background-size: 15px 10px;
-      transition: all 0.3s linear;
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: $primary-color;
-        background-color: $textmenu;
-        transform: scale(0.9);
-        text-decoration: none;
-        padding-right: 22px;
-      }
     }
   }
 }

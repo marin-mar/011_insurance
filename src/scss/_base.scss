@@ -35,7 +35,17 @@ img {
   display: block;
 }
 
-section {
-  margin-top: 6rem;
-  padding: 2rem;
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  @media (min-width: 992px) {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+  }
 }

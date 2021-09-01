@@ -4,4 +4,17 @@
 @import "_container";
 @import "_base";
 @import "header";
+@import "intro";
+
 @import "footer";
+
+@import "_button";
+
+// temorary styles
+
+#product,
+#pricing,
+#contact {
+  margin-top: 6rem;
+  padding: 2rem;
+}
