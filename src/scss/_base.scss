@@ -4,8 +4,8 @@ body {
   font-weight: 400;
   font-size: $font-size;
   scroll-behavior: smooth;
-  color: $text;
-  background-color: $bg;
+  color: $dark-color;
+  background-color: $light-color;
 
   &.--locked {
     overflow: hidden;

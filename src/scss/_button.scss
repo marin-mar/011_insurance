@@ -3,8 +3,8 @@
   min-width: 180px;
   max-width: 250px;
   padding: 15px 22px;
-  color: $textmenu;
-  background-color: $primary-color;
+  color: $light-color;
+  background-color: $first-color;
   border-radius: 5px;
   font-weight: 700;
   font-size: 14px;
@@ -41,8 +41,8 @@
   &--round:hover,
   &--round:active,
   &--round:focus {
-    color: $primary-color;
-    background-color: $textmenu;
+    color: $first-color;
+    background-color: $light-color;
     transform: scale(0.9);
     text-decoration: none;
     padding: 15px 25px;
@@ -50,15 +50,15 @@
 
   &--transparent {
     background-color: transparent;
-    border: 1px solid $textmenu;
+    border: 1px solid $light-color;
     text-align: center;
 
     &:hover,
     &:active,
     &:focus {
-      color: $primary-color;
+      color: $first-color;
       background-color: transparent;
-      border: 1px solid $primary-color;
+      border: 1px solid $first-color;
       transform: scale(0.9);
       text-decoration: none;
       padding: 15px 25px;

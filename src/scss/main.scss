@@ -5,14 +5,13 @@
 @import "_base";
 @import "header";
 @import "intro";
+@import "product";
 
 @import "footer";
 
 @import "_button";
 
 // temorary styles
-
-#product,
 #pricing,
 #contact {
   margin-top: 6rem;
