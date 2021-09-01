@@ -1,0 +1,392 @@
+/* mixins */
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Montserrat-Regular"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Montserrat-Medium"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+  src: local("Montserrat-SemiBold"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Montserrat-Bold"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+/* container */
+
+.container {
+  margin: 0 auto;
+  max-width: 95vw;
+}
+
+/* Main Styles */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+body.--locked {
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+section {
+  margin-top: 6rem;
+  padding: 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: #ffffff;
+  background-color: #252b42;
+  text-align: center;
+  padding: 35px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  z-index: 5;
+}
+
+.header__menu {
+  order: 1;
+}
+
+.header__login {
+  z-index: 5;
+  margin-left: auto;
+}
+
+.header--sticky {
+  padding: 5px;
+}
+
+.header--sticky > .container > .menu > .menu__body::before {
+  height: 30px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+
+.logo__link {
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.logo__link:hover,
+.logo__link:active,
+.logo__link:focus {
+  color: #23a6f0;
+  text-decoration: underline;
+}
+
+.menu {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.menu__icon {
+  z-index: 25;
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu__icon:before,
+.menu__icon:after {
+  content: "";
+}
+
+.menu__icon:before,
+.menu__icon:after,
+.menu__icon span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  transition: all 0.3s linear;
+  background-color: #ffffff;
+}
+
+.menu__icon:before {
+  top: 0;
+}
+
+.menu__icon:after {
+  bottom: 0;
+}
+
+.menu__icon span {
+  top: 50%;
+  transform: scale(1) translate(0, -50%);
+}
+
+.menu__icon--active span {
+  transform: scale(0) translate(0, -50%);
+}
+
+.menu__icon--active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.menu__icon--active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.menu__body {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background-color: #252b42;
+  transition: all 0.3s linear;
+  overflow: auto;
+}
+
+.menu__body--active {
+  top: 0;
+}
+
+.menu__body--active > .menu__list {
+  padding-top: 10%;
+}
+
+.menu__body--active::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: #252b42;
+  z-index: 2;
+}
+
+.menu__item {
+  margin: 30px;
+}
+
+.menu__link {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.menu__link:hover,
+.menu__link:active,
+.menu__link:focus {
+  color: #23a6f0;
+  text-decoration: underline;
+}
+
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login--desktop {
+  display: none;
+}
+
+.login__link {
+  display: block;
+  cursor: pointer;
+  margin-right: 24px;
+}
+
+.login__link:hover,
+.login__link:active,
+.login__link:focus {
+  color: #23a6f0;
+  text-decoration: underline;
+}
+
+.login__link--member {
+  display: block;
+  min-width: 220px;
+  padding: 15px 22px;
+  padding-right: 40px;
+  background-color: #23a6f0;
+  border-radius: 5px;
+  background-image: url("../img/header/header__member.svg");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size: 15px 10px;
+  transition: all 0.3s linear;
+}
+
+.login__link--member:hover,
+.login__link--member:active,
+.login__link--member:focus {
+  color: #23a6f0;
+  background-color: #ffffff;
+  transform: scale(0.9);
+  text-decoration: none;
+  padding-right: 22px;
+}
+
+@media (min-width: 270px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .header__logo {
+    margin-right: 5%;
+  }
+
+  .header__menu {
+    order: 0;
+  }
+
+  .header__login {
+    margin-left: 0;
+  }
+
+  .menu {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .menu__icon {
+    display: none;
+  }
+
+  .menu__body {
+    position: static;
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu__item {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .login--desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  .login--mobile {
+    display: none;
+  }
+
+  .login__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+}
