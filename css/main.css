@@ -77,9 +77,12 @@ img {
   display: block;
 }
 
-section {
-  margin-top: 6rem;
-  padding: 2rem;
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 .header {
@@ -275,28 +278,113 @@ section {
   text-decoration: underline;
 }
 
-.login__link--member {
+.intro {
+  min-height: 650px;
+  padding-top: 6rem;
+  background-image: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%), url("../img/intro/intro_bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  color: #ffffff;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+}
+
+.intro__container {
+  margin: 80px 50px;
+}
+
+.intro__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin-top: 40px;
+}
+
+.intro__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.intro__button:first-child {
+  margin-bottom: 25px;
+}
+
+.button {
   display: block;
-  min-width: 220px;
+  min-width: 180px;
+  max-width: 250px;
   padding: 15px 22px;
-  padding-right: 40px;
+  color: #ffffff;
   background-color: #23a6f0;
   border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  transition: all 0.3s linear;
+}
+
+.button--arrow {
+  padding-right: 40px;
   background-image: url("../img/header/header__member.svg");
   background-repeat: no-repeat;
   background-position: 90% 50%;
   background-size: 15px 10px;
-  transition: all 0.3s linear;
+  text-align: center;
 }
 
-.login__link--member:hover,
-.login__link--member:active,
-.login__link--member:focus {
+.button--round,
+.button--transparent {
+  padding: 10px 35px;
+  border-radius: 37px;
+  text-align: center;
+}
+
+.button:hover,
+.button:active,
+.button:focus,
+.button--arrow:hover,
+.button--arrow:active,
+.button--arrow:focus,
+.button--round:hover,
+.button--round:active,
+.button--round:focus {
   color: #23a6f0;
   background-color: #ffffff;
   transform: scale(0.9);
   text-decoration: none;
-  padding-right: 22px;
+  padding: 15px 25px;
+}
+
+.button--transparent {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+
+.button--transparent:hover,
+.button--transparent:active,
+.button--transparent:focus {
+  color: #23a6f0;
+  background-color: transparent;
+  border: 1px solid #23a6f0;
+  transform: scale(0.9);
+  text-decoration: none;
+  padding: 15px 25px;
+}
+
+#product,
+#pricing,
+#contact {
+  margin-top: 6rem;
+  padding: 2rem;
 }
 
 @media (min-width: 270px) {
@@ -320,6 +408,13 @@ section {
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 80px;
+    letter-spacing: 0.2px;
   }
 
   .header__logo {
@@ -347,6 +442,7 @@ section {
 
   .menu__body {
     position: static;
+    background-color: transparent;
   }
 
   .menu__list {
@@ -357,6 +453,25 @@ section {
 
   .menu__item {
     margin: 0 30px;
+  }
+
+  .intro__container {
+    margin: 115px 50px;
+    width: 50%;
+  }
+
+  .intro__buttons {
+    flex-direction: row;
+  }
+
+  .intro__button:first-child {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+
+  .button--round,
+  .button--transparent {
+    padding: 15px 37px;
   }
 }
 
@@ -369,6 +484,14 @@ section {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+
+  .header {
+    background-color: transparent;
+  }
+
+  .header--sticky {
+    background-color: #252b42;
   }
 
   .login--desktop {
@@ -390,3 +513,5 @@ section {
     letter-spacing: 0.2px;
   }
 }
+
+.webp .intro { background-image: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%), url(../img/intro/intro_bg.webp); }
