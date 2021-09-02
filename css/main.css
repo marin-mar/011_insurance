@@ -468,7 +468,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -639,6 +639,201 @@ img {
   margin: 0 auto;
 }
 
+.contacts {
+  min-height: 670px;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: linear-gradient(89.83deg, #ffffff 14.24%, #ffffff 14.25%, rgba(255, 255, 255, 0) 99.55%), url("../img/contacts/contacts_bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, top right;
+}
+
+.contacts__container {
+  padding: 110px 0 100px;
+}
+
+.contacts__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+.contacts__title {
+  margin-bottom: 40px;
+}
+
+.contacts__form {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.contacts__btn {
+  margin: 10px auto;
+  padding: 15px 25px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__name,
+.form__email,
+.form__select-product,
+.form__select-time,
+.form__message {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__submit {
+  margin-bottom: 10px;
+}
+
+.form__input,
+.form__textarea,
+.form__select,
+.form__option,
+.form__label {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+
+.form__input,
+.form__textarea,
+.form__select,
+.form__option {
+  min-height: 50px;
+  background: #ffffff;
+  border: 1px solid #8ec2f2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.form__input::-moz-placeholder, .form__textarea::-moz-placeholder {
+  color: #252b42;
+  font-weight: 600;
+}
+
+.form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
+  color: #252b42;
+  font-weight: 600;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder,
+.form__option[disabled] {
+  color: #252b42;
+  font-weight: 600;
+}
+
+.form__textarea::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__textarea:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__textarea,
+.form__textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../img/contacts/contacts_select_arrow.svg") no-repeat right;
+  background-position-x: calc(100% - 15px);
+}
+
+.footer__top {
+  color: #252b42;
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer__top--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__bottom {
+  color: #ffffff;
+  background-color: #252b42;
+  padding: 50px 0;
+}
+
+.footer__bottom--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.footer__text {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.footer__btn {
+  margin: 0 auto;
+  margin-top: 65px;
+  text-align: center;
+  padding: 15px 40px;
+}
+
+.footer__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  margin-bottom: 20px;
+}
+
+.footer__link {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+
+.footer__info,
+.footer__legal,
+.footer__features,
+.footer__resources,
+.footer__connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  padding-left: 50px;
+}
+
 .button {
   display: block;
   min-width: 180px;
@@ -707,11 +902,6 @@ img {
   box-shadow: none;
 }
 
-#contact {
-  margin-top: 6rem;
-  padding: 2rem;
-}
-
 @media (min-width: 270px) {
   .container {
     max-width: 95%;
@@ -722,6 +912,24 @@ img {
   .reviews__img {
     top: 30px;
     right: 40px;
+  }
+}
+
+@media (min-width: 400px) {
+  .footer__bottom--container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .footer__info,
+  .footer__legal,
+  .footer__features,
+  .footer__resources,
+  .footer__connect {
+    width: auto;
+    margin-top: 20px;
   }
 }
 
@@ -828,6 +1036,7 @@ img {
 
   .products__list {
     padding: 60px 0 110px;
+    flex-direction: row;
   }
 
   .pricing__container {
@@ -852,9 +1061,36 @@ img {
     border-radius: 5px;
   }
 
+  .footer__top--container {
+    flex-direction: row;
+  }
+
+  .footer__bottom--container {
+    justify-content: space-between;
+  }
+
+  .footer__title {
+    text-align: left;
+  }
+
+  .footer__text {
+    text-align: left;
+  }
+
+  .footer__btn {
+    margin: 0;
+  }
+
   .button--round,
   .button--transparent {
     padding: 15px 37px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .products__list {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -899,6 +1135,46 @@ img {
   .advantages__item {
     margin: 30px;
   }
+
+  .products__list {
+    width: auto;
+  }
+
+  .contacts__subtitle {
+    text-align: left;
+  }
+
+  .contacts__title {
+    text-align: left;
+  }
+
+  .contacts__form {
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .contacts__btn {
+    margin-left: 0;
+  }
+
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__name,
+  .form__email,
+  .form__select-product,
+  .form__select-time {
+    max-width: 48%;
+  }
+
+  .form__name,
+  .form__select-product {
+    margin-right: 20px;
+  }
 }
 
 .webp .intro { background-image: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%), url(../img/intro/intro_bg.webp); }
+
+.webp .contacts { background-image: linear-gradient(89.83deg, #ffffff 14.24%, #ffffff 14.25%, rgba(255, 255, 255, 0) 99.55%), url(../img/contacts/contacts_bg.webp); }
