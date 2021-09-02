@@ -1,0 +1,78 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1400px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__name,
+  &__email,
+  &__select-product,
+  &__select-time,
+  &__message {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name,
+  &__email,
+  &__select-product,
+  &__select-time {
+    @media (min-width: 1400px) {
+      max-width: 48%;
+    }
+  }
+
+  &__name,
+  &__select-product {
+    @media (min-width: 1400px) {
+      margin-right: 20px;
+    }
+  }
+
+  &__submit {
+    margin-bottom: 10px;
+  }
+
+  &__input,
+  &__textarea,
+  &__select,
+  &__option,
+  &__label {
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: $second-color;
+  }
+
+  &__input,
+  &__textarea,
+  &__select,
+  &__option {
+    min-height: 50px;
+    background: $light-color;
+    border: 1px solid $third-color;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder,
+  &__option[disabled] {
+    color: $third-color;
+    font-weight: 600;
+  }
+
+  &__select {
+    appearance: none;
+    background: url("../img/contacts/contacts_select_arrow.svg") no-repeat right;
+    background-position-x: calc(100% - 15px);
+  }
+}
