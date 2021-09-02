@@ -47,6 +47,7 @@
 
   &--sticky {
     padding: 5px;
+    box-shadow: $box-shadow;
 
     @media (min-width: 1400px) {
       background-color: $second-color;

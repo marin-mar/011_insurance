@@ -11,6 +11,7 @@
   line-height: 22px;
   letter-spacing: 0.2px;
   transition: all 0.3s linear;
+  box-shadow: $box-shadow;
 
   &--arrow {
     padding-right: 40px;
@@ -46,12 +47,14 @@
     transform: scale(0.9);
     text-decoration: none;
     padding: 15px 25px;
+    box-shadow: none;
   }
 
   &--transparent {
     background-color: transparent;
     border: 1px solid $light-color;
     text-align: center;
+    box-shadow: $box-shadow;
 
     &:hover,
     &:active,
@@ -62,6 +65,7 @@
       transform: scale(0.9);
       text-decoration: none;
       padding: 15px 25px;
+      box-shadow: none;
     }
   }
 }
