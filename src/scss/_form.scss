@@ -66,8 +66,13 @@
   &__input::placeholder,
   &__textarea::placeholder,
   &__option[disabled] {
-    color: $third-color;
+    color: $second-color;
     font-weight: 600;
+  }
+
+  &__textarea,
+  &__textarea::placeholder {
+    font-family: $fontFamily;
   }
 
   &__select {

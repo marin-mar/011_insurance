@@ -12,15 +12,14 @@ if (menuIcon) {
 }
 
 // smooth scroll
-const menulinks = document.querySelectorAll(".menu__item > .menu__link[data-scrollTo]");
+const menulinks = document.querySelectorAll("[data-scrollTo]");
 
 if (menulinks.length > 0) {
   menulinks.forEach((menuLink) => {
     menuLink.addEventListener("click", function (e) {
       const scrollTo = e.target.dataset.scrollto;
       const scrollToBlock = document.querySelector(scrollTo);
-      const scrollToBlockValue =
-        scrollToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header").offsetHeight;
+      const scrollToBlockValue = scrollToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header").offsetHeight;
 
       if (scrollTo && scrollToBlock) {
         e.preventDefault();
