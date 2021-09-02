@@ -1,0 +1,133 @@
+.menu {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.2px;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  &__icon {
+    z-index: 25;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+    }
+
+    &:before,
+    &:after,
+    & span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      transition: all 0.3s linear;
+      background-color: $light-color;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+
+    &--active span {
+      transform: scale(0) translate(0, -50%);
+    }
+
+    &--active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    &--active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+
+  &__body {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $light-color;
+    background-color: $second-color;
+    transition: all 0.3s linear;
+    overflow: auto;
+
+    @media (min-width: 992px) {
+      position: static;
+      background-color: transparent;
+    }
+
+    &--active {
+      top: 0;
+
+      & > .menu__list {
+        padding-top: 10%;
+      }
+
+      &::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        top: 0;
+        left: 0;
+        background-color: $second-color;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__list {
+    @media (min-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  &__item {
+    margin: 30px;
+
+    @media (min-width: 992px) {
+      margin: 0 30px;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $first-color;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.stars {
+  min-width: 115px;
+  max-width: 140px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+  }
+
+  &__star {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}
