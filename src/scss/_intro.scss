@@ -1,8 +1,9 @@
+/* intro */
+
 .intro {
   min-height: 650px;
   padding-top: 6rem;
-  background-image: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%),
-    url("../img/intro/intro_bg.jpg");
+  background-image: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%), url("../img/intro/intro_bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: center, center;
