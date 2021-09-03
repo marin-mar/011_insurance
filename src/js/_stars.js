@@ -1,3 +1,5 @@
+/* star-rating on click */
+
 const stars = document.querySelectorAll(".stars__star");
 
 stars.forEach((star) => {

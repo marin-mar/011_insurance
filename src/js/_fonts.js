@@ -1,4 +1,4 @@
-// fonts from folder to scss
+/* fonts from folder to scss */
 
 function fontsStyle(params) {
   let file_content = fs.readFileSync(source_folder + "/scss/fonts.scss");

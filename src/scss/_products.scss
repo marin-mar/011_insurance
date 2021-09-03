@@ -62,9 +62,8 @@
   &__description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    padding: 260px 20px 30px 20px;
+    justify-content: flex-end;
+    padding: 30px 10px;
     position: absolute;
     left: 0;
     bottom: 0;

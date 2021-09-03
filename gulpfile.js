@@ -48,6 +48,7 @@ const svgsprite = require("gulp-svg-sprite");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
+const htmlmin = require("gulp-htmlmin");
 
 const server = () => {
   browserSync.init({
@@ -64,6 +65,13 @@ const html = () => {
   return src(path.src.html)
     .pipe(fileinclude())
     .pipe(webphtml())
+    .pipe(dest(path.build.html))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(
+      rename({
+        extname: ".min.html",
+      })
+    )
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({ stream: true }));
 };

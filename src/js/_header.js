@@ -1,17 +1,17 @@
-// burger menu
+/* burger menu */
 
 const menuIcon = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 
 if (menuIcon) {
   menuIcon.addEventListener("click", function () {
-    document.body.classList.toggle("--locked");
+    document.body.classList.toggle("locked");
     menuIcon.classList.toggle("menu__icon--active");
     menuBody.classList.toggle("menu__body--active");
   });
 }
 
-// smooth scroll
+/* smooth scroll */
 const menulinks = document.querySelectorAll("[data-scrollTo]");
 
 if (menulinks.length > 0) {
@@ -31,7 +31,7 @@ if (menulinks.length > 0) {
       }
 
       if (menuIcon.classList.contains("menu__icon--active")) {
-        document.body.classList.remove("--locked");
+        document.body.classList.remove("locked");
         menuIcon.classList.remove("menu__icon--active");
         menuBody.classList.remove("menu__body--active");
       }
