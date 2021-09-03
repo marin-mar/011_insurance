@@ -50,7 +50,7 @@ body {
   background-color: #ffffff;
 }
 
-body.--locked {
+body.locked {
   overflow: hidden;
 }
 
@@ -489,7 +489,6 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: left;
   padding: 30px 10px;
   position: absolute;
   left: 0;
@@ -915,7 +914,7 @@ img {
   transition: all 0.3s linear;
 }
 
-.popup404.--active {
+.popup404--active {
   opacity: 1;
   pointer-events: all;
   transition: all 0.3s linear;
@@ -936,7 +935,7 @@ img {
   transition: all 0.3s linear;
 }
 
-.popup404__body.--active {
+.popup404__body--active {
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s linear;
 }

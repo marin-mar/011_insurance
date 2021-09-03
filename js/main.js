@@ -21,7 +21,7 @@ const menuBody = document.querySelector(".menu__body");
 
 if (menuIcon) {
   menuIcon.addEventListener("click", function () {
-    document.body.classList.toggle("--locked");
+    document.body.classList.toggle("locked");
     menuIcon.classList.toggle("menu__icon--active");
     menuBody.classList.toggle("menu__body--active");
   });
@@ -47,7 +47,7 @@ if (menulinks.length > 0) {
       }
 
       if (menuIcon.classList.contains("menu__icon--active")) {
-        document.body.classList.remove("--locked");
+        document.body.classList.remove("locked");
         menuIcon.classList.remove("menu__icon--active");
         menuBody.classList.remove("menu__body--active");
       }
@@ -91,20 +91,20 @@ const closePopupButton = document.querySelector(".popup404__close");
 nonexistentLinks.forEach(nonexistentLink => {
   nonexistentLink.addEventListener("click", e => {
     e.preventDefault();
-    document.body.classList.add("--locked");
-    popupBg.classList.add("--active");
-    popup.classList.add("--active");
+    document.body.classList.add("locked");
+    popupBg.classList.add("popup404--active");
+    popup.classList.add("popup404__body--active");
   });
 });
 closePopupButton.addEventListener("click", () => {
-  document.body.classList.remove("--locked");
-  popupBg.classList.remove("--active");
-  popup.classList.remove("--active");
+  document.body.classList.remove("locked");
+  popupBg.classList.remove("popup404--active");
+  popup.classList.remove("popup404__body--active");
 });
 document.addEventListener("click", e => {
   if (e.target === popupBg) {
-    document.body.classList.remove("--locked");
-    popupBg.classList.remove("--active");
-    popup.classList.remove("--active");
+    document.body.classList.remove("locked");
+    popupBg.classList.remove("popup404--active");
+    popup.classList.remove("popup404__body--active");
   }
 });
