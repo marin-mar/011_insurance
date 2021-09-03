@@ -62,16 +62,19 @@ const server = () => {
 };
 
 const html = () => {
+  src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(webphtml())
+    .pipe(
+      rename({
+        extname: ".expanded.html",
+      })
+    )
+    .pipe(dest(path.build.html));
   return src(path.src.html)
     .pipe(fileinclude())
     .pipe(webphtml())
-    .pipe(dest(path.build.html))
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(
-      rename({
-        extname: ".min.html",
-      })
-    )
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({ stream: true }));
 };
