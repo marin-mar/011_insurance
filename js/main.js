@@ -1,4 +1,4 @@
-// test for support webp-background in css
+/* test for support webp-background in css */
 document.addEventListener("DOMContentLoaded", function () {
   testWebP(document.body);
 });
@@ -12,7 +12,8 @@ function testWebP(elem) {
       elem.classList.add("webp");
     }
   };
-} // burger menu
+}
+/* burger menu */
 
 
 const menuIcon = document.querySelector(".menu__icon");
@@ -24,7 +25,8 @@ if (menuIcon) {
     menuIcon.classList.toggle("menu__icon--active");
     menuBody.classList.toggle("menu__body--active");
   });
-} // smooth scroll
+}
+/* smooth scroll */
 
 
 const menulinks = document.querySelectorAll("[data-scrollTo]");
@@ -65,6 +67,8 @@ window.onscroll = function () {
     header.classList.remove("header--sticky");
   }
 };
+/* star-rating on click */
+
 
 const stars = document.querySelectorAll(".stars__star");
 stars.forEach(star => {
@@ -78,14 +82,29 @@ stars.forEach(star => {
     }
   });
 });
+/* popup 404 for nonexistent links */
+
 const nonexistentLinks = document.querySelectorAll('a[href="#"]');
+const popupBg = document.querySelector(".popup404");
+const popup = document.querySelector(".popup404__body");
+const closePopupButton = document.querySelector(".popup404__close");
 nonexistentLinks.forEach(nonexistentLink => {
-  nonexistentLink.addEventListener("click", function (e) {
+  nonexistentLink.addEventListener("click", e => {
     e.preventDefault();
-    console.log("Popup404");
-    alert(`
-		This is a popup 404
-		Thank you for your click
-		This link is under development`);
+    document.body.classList.add("--locked");
+    popupBg.classList.add("--active");
+    popup.classList.add("--active");
   });
+});
+closePopupButton.addEventListener("click", () => {
+  document.body.classList.remove("--locked");
+  popupBg.classList.remove("--active");
+  popup.classList.remove("--active");
+});
+document.addEventListener("click", e => {
+  if (e.target === popupBg) {
+    document.body.classList.remove("--locked");
+    popupBg.classList.remove("--active");
+    popup.classList.remove("--active");
+  }
 });

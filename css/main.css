@@ -488,9 +488,9 @@ img {
 .products__description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: left;
-  padding: 260px 20px 30px 20px;
+  padding: 30px 10px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -879,7 +879,6 @@ img {
   background-color: #ffffff;
   transform: scale(0.9);
   text-decoration: none;
-  padding: 15px 25px;
   box-shadow: none;
 }
 
@@ -898,8 +897,73 @@ img {
   border: 1px solid #23a6f0;
   transform: scale(0.9);
   text-decoration: none;
-  padding: 15px 25px;
   box-shadow: none;
+}
+
+/* popup404 */
+
+.popup404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+
+.popup404.--active {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.3s linear;
+}
+
+.popup404__body {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #ffffff;
+  background: #252b42;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  padding: 25px;
+  transition: all 0.3s linear;
+}
+
+.popup404__body.--active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s linear;
+}
+
+.popup404__title {
+  margin: 20px 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.popup404__text {
+  margin: 10px 0;
+}
+
+.popup404__close {
+  display: block;
+  width: 100px;
+  max-width: 90%;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #23a6f0;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.6);
+}
+
+.popup404__close:hover {
+  transform: scale(0.9);
 }
 
 @media (min-width: 270px) {
