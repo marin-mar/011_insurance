@@ -6,7 +6,9 @@
 - BEM нейминг, разделение блоков на отдельные файлы, файлы разделены по типу (расширению).<br>
 - Меню складывается в бургер-меню, фиксировано и меняет background при прокрутке экрана, плавный скрол до секции.<br>
 - При клике на несуществующие ссылки всплывает попап 404 (как альтернатива странице 404).<br>
-- Итоговые файлы в двух вариантах - сжатом для сайта и развернутом для наглядности. Проверено в валидаторах W3C. PageSpeed Insights для мобильных и ПК 100%.
+- Итоговые файлы в двух вариантах - сжатом для сайта и развернутом для наглядности. Проверено в валидаторах W3C. PageSpeed Insights для мобильных и ПК 100%.<br>
+- Сайт размещен:<br>
+<a href="https://marin-mar.github.io/insurance/" rel="noreferrer" target="blank" >https://marin-mar.github.io/insurance/</a><br>
 </h3>
 ================================
 <h3>Explanation of the project:</h3> 
@@ -17,5 +19,7 @@
 - BEM naming, division of blocks into separate files, files are divided by type (extension).<br>
 - The menu is folded into a burger-menu, fixed and changes the background when scrolling the screen, smooth scrolling to the section.<br>
 - When clicking on non-existent links, a pop-up 404 pops up (as an alternative to the 404 page).<br>
-- Summary files in two versions - compressed for the site and expanded for clarity. Tested in W3C validators. PageSpeed Insights for mobile and for PC are 100%.
+- Summary files in two versions - compressed for the site and expanded for clarity. Tested in W3C validators. PageSpeed Insights for mobile and for PC are 100%<br>
+- Site is published at:<br>
+<a href="https://marin-mar.github.io/insurance/" rel="noreferrer" target="blank" >https://marin-mar.github.io/insurance/</a><br>
 </h3>
